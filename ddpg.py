@@ -3,7 +3,7 @@
 # Author: Flood Sung
 # Date: 2016.5.4
 # -----------------------------------
-import gym
+
 import tensorflow as tf
 import numpy as np
 from ou_noise import OUNoise
@@ -26,8 +26,8 @@ class DDPG:
         self.environment = env
         # Randomly initialize actor network and critic network
         # with both their target networks
-        self.state_dim = env.observation_space.shape[0]
-        self.action_dim = env.action_space.shape[0]
+        self.state_dim = 2
+        self.action_dim = 24
 
         self.sess = tf.InteractiveSession()
 
